@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+    </head>
+    <body>
+         
+        
+        <form action="sending task.php" method="POST">
+            <span>Day</span><br>
+            <input type="checkBox" name="days[]" value="Sunday"/><span>Sunday</span>
+            <input type="checkBox" name="days[]" value="Monday"/><span>Monday</span>
+            <input type="checkBox" name="days[]" value="Tuseday"/><span>Tuseday</span>
+            <input type="checkBox" name="days[]" value="Wensday"/><span>Wensday</span>
+            <input type="checkBox" name="days[]" value="thrsday"/><span>thrsday</span>
+            <br><br>
+            
+            <span>Task Name</span><input type="text" name="Tname"/><br><br>
+            <span>Task Room</span><input type="text" name="Troom"/><br><br>
+            <span>Start Time</span><Select name="Ttime">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                </Select><br><br>
+            <span>Task Duration</span><Select name="Tduration">
+                <option value = "50">50 Minutes</option>
+                <option value = "80">80 Minutes</option>
+            </select><br><br>
+            
+            <input type="submit" value="Submit"/>
+        </form>
+        
+    </body>
+</html>

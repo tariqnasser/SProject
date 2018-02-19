@@ -1,0 +1,9 @@
+uploaded in week3 
+
+functions work: 
+Login, Register, Add Task, Delete Task, Update Task, Show Tasks. 
+
+problem: 
+1- the id dose not move to other pages 
+2- the design of the pages 
+
