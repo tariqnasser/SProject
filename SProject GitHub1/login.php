@@ -1,12 +1,10 @@
 <?php
-function login () {
-     $conn = new mysqli("sql108.hostkda.com", "hkda_21504057", "tark12345","hkda_21504057_sproject");
+     $conn = new mysqli("localhost","root","","senior project");
     
     if ($conn -> connect_error) {
         die("con failed");
         echo"error";
     }
-    global $ID;
         $SEmail= $_POST['SEmail'];
 	$Spassword = $_POST['Spassword'];
              
@@ -15,9 +13,13 @@ function login () {
 	$get = mysqli_num_rows($result);
        // echo $get." row";
 	if($get > 0){
-                  while($row = $result->fetch_assoc()) {
-       $GLOBALS['ID']=  $row["SID"] ;
-    } 
+                 while ($row = $result->fetch_assoc()){
+        global $ID ;       
+        $ID = $row["SID"] ;
+        session_start();
+        $_SESSION["ID"]  =  $row["SID"] ;
+                                }
+    
 		header("Location:staff page.php");
 		echo "done successfuly";		
 	}else{
@@ -25,11 +27,5 @@ function login () {
            echo $get." row";
 	echo "Sorry";
 	}	
-}
-function getid (){
-	
-	$GLOBALS['ID'];
-}
-
 
 ?>		

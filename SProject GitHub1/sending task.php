@@ -1,11 +1,13 @@
 <?php
-    header('Location: task form.html');
-    $conn = new mysqli("sql108.hostkda.com","hkda_21504057","tark12345","hkda_21504057_sproject");
+    $conn = new mysqli("localhost","root","","senior project");
     
     if ($conn -> connect_error) {
         die("con failed");
     }
-		// require(' ./login.php');
+       $id;
+       session_start();
+       $id = $_SESSION["ID"]  ;
+       
 		
 	if(!empty ($_POST['days'])){
 		$Ttime = $_POST['Ttime'];
@@ -14,11 +16,10 @@
 		$Troom= $_POST['Troom'];
 		
 		foreach($_POST['days'] as $Tday) {
-			//$x ="insert into task(SID,Ttime, Tname, Tday, Troom, Tduration) VALUES ('$GLOBALS['ID']','$Ttime','$Tname','$Tday','$Troom','$Tduration');";
-                        $x ="insert into task(Ttime, Tname, Tday, Troom, Tduration) VALUES ('$Ttime','$Tname','$Tday','$Troom','$Tduration');";
+			$x ="insert into task(SID,Ttime, Tname, Tday, Troom, Tduration) VALUES ('$id','$Ttime','$Tname','$Tday','$Troom','$Tduration');";
+                       // $x ="insert into task(Ttime, Tname, Tday, Troom, Tduration) VALUES ('$Ttime','$Tname','$Tday','$Troom','$Tduration');";
 		if(mysqli_query($conn, $x)){
-        echo "done successfuly";
-		echo "";
+			header('Location: task form.html');
     }else{
        die($conn->connect_error);
        echo "Sorry";

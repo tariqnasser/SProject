@@ -1,10 +1,12 @@
-uploaded in week3 
-
 functions work: 
 Login, Register, Add Task, Delete Task, Update Task, Show Tasks. 
 
-problem: 
-1- the id dose not move to other pages 
-2- the design of the pages 
+the id dose move to other pages 
+with simple design of the pages 
 
-test
+problem: 
+
+1- Force the user to access the site via the login page only
+After pressing the exit button, the user can only return by entering their information again
+
+2- Check the validity of user input on all pages and display a message when the user makes a mistake

@@ -1,6 +1,6 @@
 <?php
        
- $conn = new mysqli("sql108.hostkda.com", "hkda_21504057", "tark12345","hkda_21504057_sproject");
+ $conn = new mysqli("localhost","root","","senior project");
     
     if ($conn -> connect_error) {
         die("con failed");

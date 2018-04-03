@@ -19,9 +19,11 @@
 
 </form>
 <?php
-
-$get = "select * from task ;";
-     $conn = new mysqli("sql108.hostkda.com", "hkda_21504057", "tark12345","hkda_21504057_sproject");
+$id;
+ session_start();
+       $id = $_SESSION["ID"]  ;
+$get = "select * from task where SID = '$id' ;";
+     $conn = new mysqli("localhost","root","","senior project");
     $response = $conn->query($get);
     if ($response && $response->num_rows > 0) {
          $row;
