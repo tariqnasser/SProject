@@ -1,5 +1,13 @@
 <html>
     <head>
+	
+        <title>Task Form</title>
+		<link rel="stylesheet" href="the style.css">
+		<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="boot.css">
+    </head>
+    <body>
 	<?php
 
 $id;
@@ -7,10 +15,6 @@ $id;
        $id = $_SESSION["ID"]  ;
 	   if($id==0){header("Location:index.php");}
 ?>
-        <title>Task Form</title>
-		<link rel="stylesheet" href="the style.css">
-    </head>
-    <body>
          <div>
 		 <?php
 		 
@@ -29,11 +33,11 @@ $id;
         
         <form action="sending task.php" method="POST">
             <span style = "font-size:25px">Task Day :</span>
-            <input type="checkBox" name="days[]" value="Sunday"/><span>Sunday</span>
-            <input type="checkBox" name="days[]" value="Monday"/><span>Monday</span>
-            <input type="checkBox" name="days[]" value="Tuseday"/><span>Tuseday</span>
-            <input type="checkBox" name="days[]" value="Wensday"/><span>Wensday</span>
-            <input type="checkBox" name="days[]" value="thrsday"/><span>thrsday</span>
+            <input type="checkBox" name="days[]" value="Sunday"/><span>    &nbsp;Sunday    &nbsp;</span>
+            <input type="checkBox" name="days[]" value="Monday"/><span>    &nbsp;Monday    &nbsp;</span>
+            <input type="checkBox" name="days[]" value="Tuseday"/><span>    &nbsp;Tuseday    &nbsp;</span>
+            <input type="checkBox" name="days[]" value="Wensday"/><span>    &nbsp;Wensday    &nbsp;</span>
+            <input type="checkBox" name="days[]" value="thrsday"/><span>    &nbsp;thrsday    &nbsp;</span>
             <br><br><br>
             
             <span style = "font-size:25px">Task Name</span><input type="text" name="Tname"/>
@@ -78,8 +82,9 @@ $id;
             </select><br><br><br>
             
             <input class="button" type="submit" value="Submit" style = "font-size:20"/>
-			<button formaction="staff page.php" style = "font-size:20">Back</button>
+			<button style = "font-size:20px; color:white" formaction="staff page.php" style = "font-size:20">Back</button>
         </form>
+		<img id ="add" src = "robot-9039486.jpg"/>
         </div>
     </body>
 </html>

@@ -3,11 +3,14 @@
 <head>
 <title>Robotic Guide </title>
 <link rel="stylesheet" href="LoginStyle.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<h1>Robotic Guide System</h1>
-<div id="loginDiv"> 
+
+<div id="loginDiv" class = "container"> 
+<h1 style = "font-size:70px">Robotic Guide System</h1>
 
 <?php 
 session_start();
@@ -30,6 +33,7 @@ $_SESSION["incorect"]=0;
 <input class="input" type="password" style = "font-size:17px" placeholder="Password" name="Spassword"><br><br>
 
 <button id = "loginButton" formaction= "login.php" style = "font-size:20">Login</button>
+
 <button formaction="staff form.php" style = "font-size:20">Register</button>
 </form></div>
 </body>

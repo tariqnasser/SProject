@@ -1,15 +1,27 @@
 body{
-	background-color:gray;
+	background-image:url("robot_bw_hand.jpg");
+	background-size: 80%, 80%;
+	background-repeat: no-repeat;
+	 background-position: right;
 }
 div {
+	/*background-image:url("image.jpg");
+	background-size: 50%, 50%;
+    background-repeat: no-repeat;
+	background-color: #f2f2f2;*/
     border-radius: 10px;
-    background-color: #f2f2f2;
+    
     padding:8%;
+	padding-top:3%;
 	padding-left: 710px;
 	padding-right: 710px;
 	padding-bottom:3%;
 }
-button {
+form{
+	padding-left:35%;
+	
+}
+div button {
 	background-color:#4CAF50;
 	border : none;
 	padding:10px;
@@ -17,19 +29,25 @@ button {
 	padding-right:50px;
 	color: white;
 	text-align: center;
+	color:white;
 	border-radius:4px;
 }
 button:hover{background:green;}
 input{
+	background-color:none;
 	border-radius:4px;
 	border: 1px solid #ccc;
 	padding:15px;
-	padding-right:143px;
+	padding-right:145px;
 
 	
 }
 
-
+img {
+	float: right;
+	width:40%;
+	height:45%;
+}
 
 
 
@@ -38,22 +56,22 @@ input{
 	padding-left:60px;
 	padding-right:60px;
 }
-.input{
+/*.input{
 	
-	padding-right:151px;
-}
+	padding-right:145px;
+}*/
 input:focus {
     border: 3px solid #90EE90;
 	
 }
 h1{
 	
-	margin-bottom:-90px;
-	font-family:yu gothic ui light;
-	font-size:50px;
-	margin-left:30px;
-	text-indent:625px;
-	margin-top:150px
+/*	margin-bottom:-90px;
+	font-family:yu gothic ui light;*/
+	/*margin-left:30px;*/
+	text-indent:20%;
+	padding-bottom:5%;
+	/*margin-top:150px*/
 	
 }
 /*for the span from php*/

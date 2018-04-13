@@ -9,6 +9,7 @@
 	$Spassword = $_POST['Spassword'];
        if(!empty($SEmail)and!empty($Spassword)){
 		
+	
 	$Q= "select * from staff where SEmail = '$SEmail' AND Spassword = '$Spassword' ;";
     $result= mysqli_query($conn,$Q);
 	$get = mysqli_num_rows($result);
@@ -28,7 +29,8 @@
 	   }else{
 	session_start();
 	$_SESSION["incorect"] = 1;/*if the SEmail or Spassword are empty*/
-	header("Location:index.php"); 
+	header("Location:index.php");
 		   
 	   }
+	   
 ?>		

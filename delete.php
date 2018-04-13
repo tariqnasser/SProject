@@ -3,6 +3,9 @@
 <head>
 <title>Delete Page</title>
 <link rel="stylesheet" href="the style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="boot.css">
 </head>
 <body>
 <div>
@@ -78,8 +81,8 @@
 <br><br><span>Write Task ID :</span><br><br>
 <form action="delete task from DB.php" method="POST">
 <input type="text" name="D"/>
-<input class="button" type="submit" style = "font-size:20" value="Delete Task"/><br><br>
-<button formaction="staff page.php" style = "font-size:20" >Back</button>
+<input class="button" type="submit" value="Delete Task"/><br><br>
+<button style = "font-size:20px; color:white" formaction="staff page.php">Back</button>
 </form>
 
 </div>

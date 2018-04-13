@@ -2,6 +2,9 @@
 <head>
 <title>Staff Page</title>
 <link rel="stylesheet" href="the style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="boot.css">
 </head>
 <body>
 <div>
@@ -10,10 +13,10 @@
 
 <form>
 
-<span><button formaction="task form.php">Add Task</button></span>
-<span><button formaction="delete.php">Delete Task</button></span>
-<span><button formaction= "update page.php">Update Task</button></span>
-<span><button formaction="index.php">Logout</button></span>
+<span><button style = "font-size:25px; color:white" formaction="task form.php">Add Task</button></span>
+<span><button style = "font-size:25px; color:white" formaction="delete.php">Delete Task</button></span>
+<span><button style = "font-size:25px; color:white" formaction= "update page.php">Update Task</button></span>
+<span><button style = "font-size:25px; color:white" formaction="index.php">Logout</button></span>
 </form>
 <br><span>These are your tasks</span><br><br>
 <?php

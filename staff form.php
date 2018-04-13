@@ -2,6 +2,9 @@
     <head>
         <title>Registeration</title>
 		<link rel="stylesheet" href="the style.css">
+		<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="boot.css">
     </head>
     
 	<body>
@@ -46,6 +49,7 @@
 			}
 			}
 			?>
+			<img id = "reg" src = "umitkoy-robot-kursu.png"/>
         <form action="sending staff.php" method="POST">
 	    <span id = "name">Full Name</span><input type="text" name="Sname"/><br><br>
             <span id = "pass">Password</span><input id = "spassInput"type="password" name="Spass"/><br><br>
@@ -54,8 +58,8 @@
             <span id = "MN">Mobile number</span><input type="text" name="SMN"/><br><br>
             
             
-            <input class="button" type="submit" value="Submit" style = "font-size:20"/>
-			<button formaction="index.php" style = "font-size:20">Back</button>
+            <input class="button" type="submit" value="Submit" style = "font-size:20px"/>
+			<button style = "color:white; font-size:20px;" formaction="index.php">Back</button>
         </form>
 		</div>
     </body>
