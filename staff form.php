@@ -49,7 +49,7 @@
 			}
 			}
 			?>
-			<img id = "reg" src = "umitkoy-robot-kursu.png"/>
+			<img id = "reg" src = "robot (1).png"/>
         <form action="sending staff.php" method="POST">
 	    <span id = "name">Full Name</span><input type="text" name="Sname"/><br><br>
             <span id = "pass">Password</span><input id = "spassInput"type="password" name="Spass"/><br><br>

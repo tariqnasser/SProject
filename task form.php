@@ -84,7 +84,7 @@ $id;
             <input class="button" type="submit" value="Submit" style = "font-size:20"/>
 			<button style = "font-size:20px; color:white" formaction="staff page.php" style = "font-size:20">Back</button>
         </form>
-		<img id ="add" src = "robot-9039486.jpg"/>
+		<img id ="add" src = "umitkoy-robot-kursu.png"/>
         </div>
     </body>
 </html>

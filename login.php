@@ -9,10 +9,11 @@
 	$Spassword = $_POST['Spassword'];
        if(!empty($SEmail)and!empty($Spassword)){
 		
-	
-	$Q= "select * from staff where SEmail = '$SEmail' AND Spassword = '$Spassword' ;";
-    $result= mysqli_query($conn,$Q);
-	$get = mysqli_num_rows($result);
+	$get = $conn->prepare("select * from staff where SEmail = ? AND Spassword = ? ;");
+	$get->bind_param("ss",$SEmail,$Spassword);
+	$get->execute();
+	$result = $get->get_result();
+	$get = $result->num_rows;
 
 		if($get == 1){
         $row = $result->fetch_assoc();
