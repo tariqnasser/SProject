@@ -46,6 +46,12 @@
 			 if ($o == 1){
 				echo"<span style='background-color:Tomato;'>Your office Number must be numbers only</span><br>";
 				$_SESSION["smn"]=0;
+			}if(isset($_SESSION["se"])){
+				$e = $_SESSION["se"];
+				if ($e == 1){
+					echo"<span style='background-color:Tomato;'>Email is already in the system</span><br>";
+				$_SESSION["se"] = 0;
+				}
 			}
 			}
 			?>

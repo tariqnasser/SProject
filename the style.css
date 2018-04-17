@@ -11,10 +11,9 @@ div{
 	padding:1%;
 	padding-bottom:5%;
 	border-radius: 10px;
-    /*background-color: #f2f2f2;*/
 }
 button:hover{background:green;}
-.button:hover{background:green;}
+.button:hover{background:green;} 
 button{
 	/*all the buttons without the buttons in inside the forms*/
 	background-color:#4CAF50;
@@ -26,8 +25,6 @@ button{
 	font-size:20px;
 	text-align: center;
 	border-radius:4px;
-	
-	
 }
 .button{
 	/*all the buttons(input) inside the Forms*/
@@ -41,22 +38,7 @@ button{
 	border-radius:4px;	
 	font-size:20px;
 }
-/*div form button{*/
-	/*all the buttons without the buttons in inside the forms*/
-	/*background-color:#4CAF50;
-	border : none;
-	padding:10px;
-	padding-left:50px;
-	padding-right:50px;
-	color: white;
-	font-size:20px;
-	text-align: center;
-	border-radius:4px;
-	
-	
-}*/
 table {
-	
 	width:99%;
 	font-size:20px;
 	font-family:yu gothic ui light;
@@ -152,7 +134,10 @@ img {
 	width:35%;
 	height:80%;
 }
-
-
+#staffPageImage{
+	width:30%;
+	height:20%;
+	padding-right:5%;
+}
 
 

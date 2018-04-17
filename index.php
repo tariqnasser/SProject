@@ -12,6 +12,8 @@
 <div id="loginDiv" class = "container"> 
 <h1 style = "font-size:70px">Robotic Guide System</h1>
 
+
+<form  method="POST">
 <?php 
 session_start();
 $_SESSION["ID"]=0;/*For Logout*/
@@ -26,8 +28,6 @@ $_SESSION["incorect"]=0;
 }
 }
 ?>
-<form  method="POST">
-
 <input  type="text" style = "font-size:17px" placeholder="Email Address" name="SEmail"><br><br>
 
 <input class="input" type="password" style = "font-size:17px" placeholder="Password" name="Spassword"><br><br>

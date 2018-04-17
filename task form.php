@@ -77,8 +77,8 @@ $id;
 				<option value="23:30">23:30</option>
                 </Select>
             <span>Task Duration</span><Select name="Tduration">
-                <option value = "50">50 Minutes</option>
-                <option value = "80">80 Minutes</option>
+                <option value = "50 Minutes">50 Minutes</option>
+                <option value = "80 Minutes">80 Minutes</option>
             </select><br><br><br>
             
             <input class="button" type="submit" value="Submit" style = "font-size:20"/>

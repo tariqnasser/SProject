@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Upadte Page</title>
+<title>Update Page</title>
 <link rel="stylesheet" href="the style.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,14 +11,36 @@
 <h1>Robotic Guide System Related To (FCIT)</h1>
 
 <form action="update from DB.php" method="POST">
-
-
+<?php
+         if(isset($_SESSION["uti"])){
+		 $x = $_SESSION["uti"];
+		 if($x == 1){
+		 echo"<br><span style='background-color:Tomato;'>The ID must be number</span><br>";
+		 $_SESSION["uti"] = 0;
+		}
+		if($x == 2){
+		echo"<br><span style='background-color:Tomato;'>The ID Empty</span>";
+		$_SESSION["uti"]=0;
+	}
+		}
+?>
+<?php
+		 if(isset($_SESSION["uf"])){
+		 $x = $_SESSION["uf"];
+		 if($x == 1){
+		 echo"<span style='background-color:Tomato;'>Please fill in all fields</span><br>";
+		 $_SESSION["uf"] = 0;
+		 }
+		 if($x == 2){
+		 echo"<span style='background-color:Tomato;'>Connection fields, please try agine</span><br>";
+		 $_SESSION["uf"] = 0;
+		 }
+		 }
+		 
+		 ?>
 <span>Write Task ID </span>
 <input type="text" name="TID"/><br>
-
-
-            <br>
-        <img src = "robot in the office_0.jpg">
+      <img src = "robot in the office_0.jpg">
             <span>Day </span>
             <input class = "radio" type="radio" name="day" value="Sunday"/><span>Sunday</span>
             <input class = "radio" type="radio" name="day" value="Monday"/><span>Monday</span>
@@ -63,38 +85,13 @@
                 <option value="23">23</option>
 				<option value="23:30">23:30</option>
                 </Select>
+				
             <span>Task Duration </span><Select name="Tduration" class = "select">
-                <option value = "50">50 Minutes</option>
-                <option value = "80">80 Minutes</option>
+                <option value = "50 Minutes">50 Minutes</option>
+                <option value = "80 Minutes">80 Minutes</option>
             </select><br><br><br>
-            <?php
+            
 		 
-		 if(isset($_SESSION["uf"])){
-		 $x = $_SESSION["uf"];
-		 if($x == 1){
-		 echo"<span style='background-color:Tomato;'>Please fill in all fields</span><br>";
-		 $_SESSION["uf"] = 0;
-		 }
-		 if($x == 2){
-		 echo"<span style='background-color:Tomato;'>Connection fields, please try agine</span><br>";
-		 $_SESSION["uf"] = 0;
-		 }
-		 }
-		 
-		 ?>
-		 <?php
-         if(isset($_SESSION["uti"])){
-		 $x = $_SESSION["uti"];
-		 if($x == 1){
-		 echo"<br><span style='background-color:Tomato;'>The ID must be number</span><br>";
-		 $_SESSION["uti"] = 0;
-		}
-		if($_SESSION["uti"]==2){
-		echo"<br><span style='background-color:Tomato;'>The ID Empty</span>";
-		$_SESSION["uti"]=0;
-	}
-		}
-?>
             <input class="button" type="submit" value="Submit" style = "font-size:20"/>
 			<button style = "font-size:20px; color:white" formaction="staff page.php" style = "font-size:20">Back</button>
 			
@@ -149,9 +146,33 @@
 
 }
 ?>
-
-<br>
-
+<?php
+         if(isset($_SESSION["uti"])){
+		 $x = $_SESSION["uti"];
+		 if($x == 1){
+		 echo"<br><span style='background-color:Tomato;'>The ID must be number</span><br>";
+		 $_SESSION["uti"] = 0;
+		}
+		if($x == 2){
+		echo"<br><span style='background-color:Tomato;'>The ID Empty</span><br>";
+		$_SESSION["uti"]=0;
+	}
+		}
+?>
+<?php
+		 if(isset($_SESSION["uf"])){
+		 $x = $_SESSION["uf"];
+		 if($x == 1){
+		 echo"<span style='background-color:Tomato;'>Please fill in all fields</span><br>";
+		 $_SESSION["uf"] = 0;
+		 }
+		 if($x == 2){
+		 echo"<span style='background-color:Tomato;'>Connection fields, please try agine</span><br>";
+		 $_SESSION["uf"] = 0;
+		 }
+		 }
+		 
+		 ?>
     </div>
 </body>
 

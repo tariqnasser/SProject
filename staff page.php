@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="boot.css">
 </head>
 <body>
+<img id = "staffPageImage" src = "lineFollower.jpg">
 <div>
 <h1>Robotic Guide System Related To (FCIT) Staff </h1>
 
