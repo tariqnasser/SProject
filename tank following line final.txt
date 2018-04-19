@@ -1,0 +1,110 @@
+
+
+
+#include "blunoAccessory.h"
+blunoAccessory myAccessory;
+char a;
+const int trackingPin1 = 2; //the moving tracking module attach to pin 2
+const int trackingPin2 = 4; //the stops tracking module attach to pin 2
+int count = 0;
+int stoppoint = 0;
+int s;
+int trigPin1=11;
+int echoPin1=12;
+int d=0;
+void setup() {
+  Serial.begin(9600);
+ // pin 8 and 9 for left motor
+  pinMode(9,OUTPUT); // speed 
+  pinMode(8,OUTPUT); // Direction
+  // pin 6 and 7 for right motor
+  pinMode(7,OUTPUT); // direction
+  pinMode(6,OUTPUT); // speed
+
+  pinMode(trackingPin1, INPUT); // set trackingPin as INPUT
+  pinMode(trackingPin2, INPUT); // set trackingPin as INPUT
+  
+  pinMode(trigPin1, OUTPUT);// triger "waves Sender"
+  pinMode(echoPin1, INPUT); // echo "waves Reciever"
+}
+
+
+
+void loop() {
+  stoppoint = Serial.read();
+  
+  if(stoppoint>0 && count<=stoppoint+1){
+  sd();
+  d=getDistance();
+  boolean val1 = digitalRead(trackingPin1); // read the value of moving tracking module
+  boolean val2 = digitalRead(trackingPin2); // read the value of stops tracking module
+  if(val1 == HIGH) //if it is HiGH
+  { 
+    digitalWrite(8,LOW);
+    analogWrite(9,s);
+    digitalWrite(7,HIGH);
+    analogWrite(6,s);
+    if(val2 == HIGH){
+        count++;
+        delay(2000);
+      }
+    if(count==stoppoint){
+        digitalWrite(8,LOW);
+        analogWrite(9,0);
+        digitalWrite(7,HIGH);
+        analogWrite(6,0);
+        Serial.write("you have reached to the office");
+        delay(5000);
+        digitalWrite(8,LOW);
+        analogWrite(9,s);
+        digitalWrite(7,HIGH);
+        analogWrite(6,s);
+        count++;
+      }
+  }
+  else
+  {
+    digitalWrite(8,LOW);
+    analogWrite(9,0);
+    digitalWrite(7,HIGH);
+    analogWrite(6,s);
+  }
+  }else{
+    digitalWrite(8,LOW);
+    analogWrite(9,0);
+    digitalWrite(7,HIGH);
+    analogWrite(6,0);
+    stoppoint=0;
+  }
+ 
+
+}
+
+void sd(){
+  if(d>=30){
+    s=255;
+    }
+  else if(d<30&&d>=15){
+    s=150;
+    }
+  else if(d<15&&d>=2){
+    s=80;
+    }
+  else if(d<2){
+    s=0;
+    }
+    
+}
+int getDistance(){ // ultraSonic method
+  long duration, distance; 
+  digitalWrite(trigPin1, HIGH);
+  delayMicroseconds(10); 
+   digitalWrite(trigPin1, LOW);
+  duration = pulseIn(echoPin1, HIGH);
+  distance = duration/58.2;
+  return distance;
+}
+
+
+  
+  
