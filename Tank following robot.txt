@@ -1,0 +1,45 @@
+
+
+
+#include "blunoAccessory.h"
+blunoAccessory myAccessory;
+char a;
+const int trackingPin = 2; //the tracking module attach to pin 2
+const int ledPin = 13; //pin13 built-in led
+
+void setup() {
+  Serial.begin(9600);
+ // pin 8 and 9 for left motor
+  pinMode(9,OUTPUT); // speed 
+  pinMode(8,OUTPUT); // Direction
+  // pin 6 and 7 for right motor
+  pinMode(7,OUTPUT); // direction
+  pinMode(6,OUTPUT); // speed
+
+  pinMode(trackingPin, INPUT); // set trackingPin as INPUT
+  pinMode(ledPin, OUTPUT); //set ledPin as OUTPUT
+ 
+}
+
+
+
+void loop() {
+  boolean val = digitalRead(trackingPin); // read the value of tracking module
+  if(val == HIGH) //if it is HiGH
+  { 
+    digitalWrite(8,LOW);
+    analogWrite(9,150);
+    digitalWrite(7,HIGH);
+    analogWrite(6,150);
+  }
+  else
+  {
+     digitalWrite(8,HIGH);
+    analogWrite(9,0);
+    digitalWrite(7,LOW);
+    analogWrite(6,0);
+  }
+}
+
+
+  
