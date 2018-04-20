@@ -14,11 +14,11 @@
 <?php
          if(isset($_SESSION["uti"])){
 		 $x = $_SESSION["uti"];
-		 if($x == 1){
+		 if($_SESSION["uti"] == 1){
 		 echo"<br><span style='background-color:Tomato;'>The ID must be number</span><br>";
 		 $_SESSION["uti"] = 0;
 		}
-		if($x == 2){
+		if($_SESSION["uti"] == 2){
 		echo"<br><span style='background-color:Tomato;'>The ID Empty</span>";
 		$_SESSION["uti"]=0;
 	}
@@ -40,7 +40,7 @@
 		 ?>
 <span>Write Task ID </span>
 <input type="text" name="TID"/><br>
-      <img src = "robot in the office_0.jpg">
+      <img id = "updateImg" src = "robot in the office_0.jpg">
             <span>Day </span>
             <input class = "radio" type="radio" name="day" value="Sunday"/><span>Sunday</span>
             <input class = "radio" type="radio" name="day" value="Monday"/><span>Monday</span>
@@ -146,33 +146,6 @@
 
 }
 ?>
-<?php
-         if(isset($_SESSION["uti"])){
-		 $x = $_SESSION["uti"];
-		 if($x == 1){
-		 echo"<br><span style='background-color:Tomato;'>The ID must be number</span><br>";
-		 $_SESSION["uti"] = 0;
-		}
-		if($x == 2){
-		echo"<br><span style='background-color:Tomato;'>The ID Empty</span><br>";
-		$_SESSION["uti"]=0;
-	}
-		}
-?>
-<?php
-		 if(isset($_SESSION["uf"])){
-		 $x = $_SESSION["uf"];
-		 if($x == 1){
-		 echo"<span style='background-color:Tomato;'>Please fill in all fields</span><br>";
-		 $_SESSION["uf"] = 0;
-		 }
-		 if($x == 2){
-		 echo"<span style='background-color:Tomato;'>Connection fields, please try agine</span><br>";
-		 $_SESSION["uf"] = 0;
-		 }
-		 }
-		 
-		 ?>
     </div>
 </body>
 
