@@ -20,10 +20,10 @@ $_SESSION["ID"]=0;/*For Logout*/
 if (isset($_SESSION["incorect"])){
 $x = $_SESSION["incorect"];
 if($x == 1){
-echo"<span style='background-color:Tomato;'>Please Enter your Email and Password</span>";
+echo"<span style='background-color:Tomato;'>Please Enter your Email and Password</span><br>";
 $_SESSION["incorect"]=0;
 }else if ($x==2){
-	echo"<span style='background-color:Tomato;'>you have Entered incorect Email or Password</span>";
+	echo"<span style='background-color:Tomato;'>you have Entered incorect Email or Password</span><br>";
 	$_SESSION["incorect"]=0;
 }
 }

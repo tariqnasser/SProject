@@ -32,7 +32,7 @@
 		  session_start();
 	      $_SESSION["smn"] = 1;/* the mobile number is incorect*/
 		  }	
-				if (ctype_alpha($Sname)){
+				if (!is_numeric($Sname)){
 					
 					}else{
 		  $state = false;

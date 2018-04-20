@@ -31,7 +31,7 @@
 			$n = $_SESSION["sn"];
 			
 			 if ($n == 1){
-				echo"<span style='background-color:Tomato;'>Your name must be letters only</span><br>";
+				echo"<span style='background-color:Tomato;'>Your name must start with letters</span><br>";
 				$_SESSION["sn"]=0;
 				}
 			}
