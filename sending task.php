@@ -21,7 +21,6 @@
 		session_start();
 		$_SESSION["tf"]=1;/*the all fieldes are empty*/
 		$state = false;
-		header("Location:task form.php");
 		}
 		
 		

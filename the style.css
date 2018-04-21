@@ -1,13 +1,8 @@
-body{
-	position:relative;
-	background-color:gray;
-}
 
 div{
 	position:relative;
 	margin:10%;
 	margin-top:2%;
-	position:center;
 	padding:1%;
 	padding-bottom:5%;
 	border-radius: 10px;
@@ -130,7 +125,6 @@ img {
 	margin-top:-20%;
 }
 .reg{
-	
 	width:35%;
 	height:80%;
 }

@@ -92,8 +92,8 @@
             </select><br><br><br>
             
 		 
-            <input class="button" type="submit" value="Submit" style = "font-size:20"/>
-			<button style = "font-size:20px; color:white" formaction="staff page.php" style = "font-size:20">Back</button>
+            <input class="button" type="submit" value="Submit" style = "font-size:20px"/>
+			<button style = "font-size:20px; color:white" formaction="staff page.php">Back</button>
 			
         </form>
         
@@ -117,8 +117,6 @@
 	   $numRow = mysqli_num_rows($result);
     
      if ($numRow > 0){
-         
-        
            echo "<table border=2>";
            echo"<tr>";
 		  echo" <th>Tsak ID</th>";

@@ -34,7 +34,7 @@ $_SESSION["incorect"]=0;
 
 <button id = "loginButton" formaction= "login.php" style = "font-size:20">Login</button>
 
-<button formaction="staff form.php" style = "font-size:20">Register</button>
+<button formaction="staff form.php" style = "font-size:20px">Register</button>
 
 </form></div>
 </body>

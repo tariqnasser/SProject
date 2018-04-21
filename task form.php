@@ -81,8 +81,8 @@ $id;
                 <option value = "80 Minutes">80 Minutes</option>
             </select><br><br><br>
             
-            <input class="button" type="submit" value="Submit" style = "font-size:20"/>
-			<button style = "font-size:20px; color:white" formaction="staff page.php" style = "font-size:20">Back</button>
+            <input class="button" type="submit" value="Submit" style = "font-size:20px"/>
+			<button style = "font-size:20px; color:white" formaction="staff page.php">Back</button>
         </form>
 		<img id ="add" src = "umitkoy-robot-kursu.png"/>
         </div>
